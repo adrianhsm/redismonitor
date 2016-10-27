@@ -1,0 +1,29 @@
+{
+  "name": "redismonitor",
+  "version": "1.0.0",
+  "description": "a web-based monitor of redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 2000 --recursive tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianhsm/redismonitor.git"
+  },
+  "keywords": [
+    "redis",
+    "monitor",
+    "web-based",
+    "visualization"
+  ],
+  "author": "adrianhsm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianhsm/redismonitor/issues"
+  },
+  "homepage": "https://github.com/adrianhsm/redismonitor#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "minimist": "^1.2.0"
+  }
+}
