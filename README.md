@@ -3,7 +3,7 @@
 
 ## Usage:
 ```
-1.npm i
+1.cd node_modules\redismonitor
 2.node index.js --redisIp=<redisIp> --redisPort=<redisPort> //default value for redisIp and redisPort are localhost and 6379
 3.open your browser and go to localhost:9999
 ```
