@@ -1,0 +1,6 @@
+.displayBlock{
+    height: 600px;
+    margin-top:20px;
+    width: 600px;
+    border: 5px solid red;
+}

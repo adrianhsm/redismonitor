@@ -3,7 +3,7 @@ const pj = require('path').join
 const express = require('express')
 const argv = require('minimist')(process.argv.slice(2))
 
-const port = argv['port'] || 9999
+const port = argv['port'] || 8888
 const redisIp = argv['redisIp'] || 'localhost'
 const redisPort = argv['redisPort'] || 6379
 const redisInfo = {}

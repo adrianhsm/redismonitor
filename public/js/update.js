@@ -1,17 +1,18 @@
 var rmData = []
 var limit = 200
-function genChart( divId, title, field ){
+var divId = 0
+function genChart( did, title, field ){
     var chart;
     chart = new Highcharts.Chart({
         chart: {
-            renderTo: divId,
+            renderTo: did,
             type: 'area',
             marginRight: 10,
             events: {
                 load: function() {
                         var series = this.series;
                         setInterval( function(){
-                            $.getJSON('http://localhost:9999/info', function (data) {
+                            $.getJSON('http://localhost:8888/info', function (data) {
                                 var shift = false 
                                 if( series[0].data.length > limit ){
                                     shift = true
@@ -68,10 +69,10 @@ $(document).ready(function () {
             useUTC: false//是否使用世界标准时间
         }
     });
-    /*compos.forEach(function(compo){
-        $(`<div id=${compo[0]} style="height: 600px;margin-top:20px;width: 600px"></div>`).append($('#body'))
-        genChart(compo[0],compo[1],compo[2])
-    })*/
-    genChart( 'longOutput1', 'longest-output-list', 'client_longest_output_list' )
-    genChart( 'memory1', 'memory', 'used_memory' )
+    compos.forEach(function(compo){
+        var id = divId + ""
+        divId++
+        console.log(id)
+        genChart(id,compo[0],compo[1])
+    })
 });
